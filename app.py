@@ -100,7 +100,7 @@ def get_partner_info(partner_id):
 
     # Собираем юзернеймы
     referral_usernames = [ref["username"] for ref in partner["referrals"]]
-    referral_usernames_str = ", ".join(referral_usernames) if referral_usernames else "нет"
+    referral_usernames_str = ", ".join(referral_usernames) if referral_usernames else ""
 
     return jsonify({
         "username": partner["username"],
@@ -111,3 +111,4 @@ def get_partner_info(partner_id):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
